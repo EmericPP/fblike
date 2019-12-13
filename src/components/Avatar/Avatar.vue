@@ -28,20 +28,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@mixin circleIt($size) {
-  width: $size;
-  height: $size;
-  border-radius: $size;
-}
-$sizes: ("xs": 30px, "s": 40px, "m": 50px, "l": 60px);
+
+$sizes: ("xs": 3rem, "s": 4rem, "m": 5rem, "l": 6rem); //map
 .avatar {
   $defaultSize: map-get($sizes, "m");
   @include circleIt($defaultSize);
-  @each $key, $value in $sizes {
+  @each $key, $value in $sizes { // @each
     &--#{$key} {
       @include circleIt($value);
     }
   }
-  background: red;
 }
 </style>

@@ -1,0 +1,5 @@
+@mixin circleIt($size) { //mixin
+width: $size;
+    height: $size;
+    border-radius: $size;
+}
